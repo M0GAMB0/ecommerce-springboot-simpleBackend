@@ -1,25 +1,27 @@
 package com.ecommerce.ecommerce.models;
 
+import java.util.UUID;
+
 public class Product {
-    private int productId;
+    private String productId;
     private String name;
     private Category category;
     private int price;
 
-    public Product(int productId, String name, Category category, int price) {
-        this.productId = productId;
+    public Product( String name, Category category, int price) {
+        this.productId = UUID.randomUUID().toString();
         this.name = name;
         this.category = category;
         this.price = price;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
+//    public void setProductId(int productId) {
+//        this.productId = productId;
+//    }
 
     public String getName() {
         return name;
