@@ -4,6 +4,7 @@ import com.ecommerce.ecommerce.models.Category;
 import com.ecommerce.ecommerce.models.PaymentMode;
 import com.ecommerce.ecommerce.models.Product;
 import com.ecommerce.ecommerce.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Service
 public class EService {
+    @Autowired
     ERepository eRepo=new ERepository();
     public void makeOrder(Integer userId, PaymentMode paymentMode){
         List<Product> orders=new LinkedList<>();
